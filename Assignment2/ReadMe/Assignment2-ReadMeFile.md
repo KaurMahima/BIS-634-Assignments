@@ -480,7 +480,7 @@ plt.show()
 
 
 #### Approximately how many bits is necessary for this approach to give good suggestions (as defined above) 90% of the time when using each of 1, 2, or 3 hash functions as above? 
- - About 10^7 Bits are necessary for this approach to give suggestions 90% of the time when using each of 1, 2, or 3 hash functions.
+ - About 7 Bits are necessary for this approach to give suggestions 90% of the time when using each of 1, 2, or 3 hash functions.
 
 ## Exercise 3
 
