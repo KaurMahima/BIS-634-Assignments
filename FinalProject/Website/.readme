@@ -1,0 +1,4 @@
+Steps to run the project:
+
+  1. make setup  - This will load the requirements.txt file which contain all the dependencies 
+  2. make run - This will run the flask server at default port 5000
