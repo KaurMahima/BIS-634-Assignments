@@ -1,0 +1,76 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <div class="header">
+        <h1></h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/background">Background</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Data
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/aboutdata">About Dataset</a><br>
+                        <a class="dropdown-item" href="/datavariables">Data Variables</a><br>
+                        <a class="dropdown-item" href="/datares">Data Restrictions and FAIRness</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Analysis
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/summarystatistics">Summary Statistics</a><br>
+                        <a class="dropdown-item" href="/univariateanalysis">Univariate Analysis</a><br>
+                        <a class="dropdown-item" href="/bivariateanalysis">Bivariate Analysis</a><br>
+                        <a class="dropdown-item" href="/correlationanalysis">Correlation</a><br>
+                        <a class="dropdown-item" href="/predictiveanalysis">Predictive Analysis</a><br>
+                    </div>
+                </li>
+                <li><a href="/riskcalculator">Risk Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+    <h2>Complete Correlation HeatMap</h2>
+    <img src="/static/img/Correlation1.png" width="900" height="600" class="center-block">
+    <h2>Correlation HeatMap of Categorical Variables</h2>
+    <img src="/static/img/Correlation2.png" width="900" height="600" class="center-block">
+    <h2>Correlation HeatMap of Numerical Variables</h2>
+    <img src="/static/img/Correlation3.png" width="900" height="600" class="center-block">
+</div>
+
+<div class="container-fluid">
+    <h3>Correlation Analysis Insights:</h3>
+        <ul>
+            <li>Pearson correlation was calculated to find the association between the numerical variables.</li>
+            <li>Cramer correlation was calculated to find the association between the categorical variables.</li>
+             <li>It was interesting to see that none of the variables had a correlation more than 0.5</li>
+             <li>Blood Pressure, General Health were substantially correlated with Diabates.</li>
+        </ul>
+ </div>
+
+
+    </body>
+    </html>

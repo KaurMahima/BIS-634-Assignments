@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/results.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <div class="header">
+        <h1></h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/background">Background</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Data
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/aboutdata">About Dataset</a><br>
+                        <a class="dropdown-item" href="/datavariables">Data Variables</a><br>
+                        <a class="dropdown-item" href="/datares">Data Restrictions and FAIRness</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Analysis
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/summarystatistics">Summary Statistics</a><br>
+                        <a class="dropdown-item" href="/univariateanalysis">Univariate Analysis</a><br>
+                        <a class="dropdown-item" href="/bivariateanalysis">Bivariate Analysis</a><br>
+                        <a class="dropdown-item" href="/correlationanalysis">Correlation</a><br>
+                        <a class="dropdown-item" href="/predictiveanalysis">Predictive Analysis</a><br>
+                    </div>
+                </li>
+                <li><a href="/riskcalculator">Risk Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h2 class="heading2">Your Results Are Here!</h2><br>
+    <h3 class = "heading3">Diabetes Risk Category</h3>
+    <div class='paragraph'>{{ msg }}</div>
+    <h3 class = "heading3">Lifestyle Recommendations</h3>
+    <div class='paragraph'>{{ msg1 }}</div>
+    <h3 class = "heading3">Diabetes Risk Index </h3>
+    <div class='paragraph'>{{ dri }}</div>
+    
+
+    <div class="footer">
+        <h2></h2>
+    </div>
+
+</body>
+
+</html>

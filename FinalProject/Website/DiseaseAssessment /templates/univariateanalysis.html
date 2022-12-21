@@ -1,0 +1,88 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <div class="header">
+        <h1></h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/background">Background</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Data
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/aboutdata">About Dataset</a><br>
+                        <a class="dropdown-item" href="/datavariables">Data Variables</a><br>
+                        <a class="dropdown-item" href="/datares">Data Restrictions and FAIRness</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Analysis
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/summarystatistics">Summary Statistics</a><br>
+                        <a class="dropdown-item" href="/univariateanalysis">Univariate Analysis</a><br>
+                        <a class="dropdown-item" href="/bivariateanalysis">Bivariate Analysis</a><br>
+                        <a class="dropdown-item" href="/correlationanalysis">Correlation</a><br>
+                        <a class="dropdown-item" href="/predictiveanalysis">Predictive Analysis</a><br>
+                    </div>
+                </li>
+                <li><a href="/riskcalculator">Risk Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+<div class="container-fluid">
+    <h2> Select the variable for univariate analysis</h2>
+    <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <h5><a class="dropdown-item" href="/univariateanalysis/Diabetes">Diabates</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/BMI">BMI</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/HighBP">High BP</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/GenHlth">General Health</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/PhysHlth">Physical Health</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/MentHlth">Mental Health</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/CholCheck">Cholesterol Check in last 5 years</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/Stroke">Stroke</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/HeartDiseaseorAttack">Heart Disease/Attack</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/Age">Age</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/Sex">Gender</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/Education">Education</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/Income">Income</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/PhysActivity">Physical Activity</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/HighChol">High Cholesterol</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/Smoker">Smoking Status</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/Veggie">Vegetable Intake</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/Fruits">Fruit Intake</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/HvyAlcoholConsump">Heavy Alcohol Consumption</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/DiffWalk">Difficulty In Walking</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/AnyHealthcare">Any Healthcare Coverage</a></h3><br>
+        <h5><a class="dropdown-item" href="/univariateanalysis/NoDocbcCost">Not seen Doctore Because of Cost</a></h3><br>
+        </div>
+      </div> 
+    </div>
+</body>
+</html>

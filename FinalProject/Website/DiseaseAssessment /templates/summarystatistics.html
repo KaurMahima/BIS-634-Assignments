@@ -1,0 +1,122 @@
+<html>
+ 
+</head>
+
+<body>
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     
+    <div class="header">
+        <h1></h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/background">Background</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Data
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/aboutdata">About Dataset</a><br>
+                        <a class="dropdown-item" href="/datavariables">Data Variables</a><br>
+                        <a class="dropdown-item" href="/datares">Data Restrictions and FAIRness</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Analysis
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/summarystatistics">Summary Statistics</a><br>
+                        <a class="dropdown-item" href="/univariateanalysis">Univariate Analysis</a><br>
+                        <a class="dropdown-item" href="/bivariateanalysis">Bivariate Analysis</a><br>
+                        <a class="dropdown-item" href="/correlationanalysis">Correlation</a><br>
+                        <a class="dropdown-item" href="/predictiveanalysis">Predictive Analysis</a><br>
+                    </div>
+                </li>
+                <li><a href="/riskcalculator">Risk Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid h-100 d-flex align-items-center justify-content-center">
+<div class=" center">
+    <h2>Summary Statistics of Categorical Variables</h2>
+    <table class="table">
+        {% for table in tables %}
+        {{ table|safe }}
+        {% endfor %}
+    </table>
+
+
+    <h2>Summary Statistics of Numerical Variables</h2>
+    <table class="table">
+        {% for table in table_num %}
+        {{ table|safe }}
+        {% endfor %}
+    </table>
+    
+    <h2>Summary Statistics of Categorical Variables of Individuals with Diabetes</h2>
+    <table class="table">
+        {% for table in table_cat_diab %}
+        {{ table|safe }}
+        {% endfor %}
+    </table>
+    <h2>Summary Statistics of Numerical Variables of Individuals with Diabetes</h2>
+    <table class="table">
+        {% for table in table_num_diab %}
+        {{ table|safe }}
+        {% endfor %}
+    </table>
+    <h2>Summary Statistics of Categorical Variables of Individuals with No Diabetes</h2>
+    <table class="table">
+        {% for table in table_sum_cat_nodiab %}
+        {{ table|safe }}
+        {% endfor %}
+    </table>
+    <h2>Summary Statistics of Numerical Variables of Individuals with No Diabetes</h2>
+    <table class="table">
+        {% for table in table_num_nodiab %}
+        {{ table|safe }}
+        {% endfor %}
+    </table>
+</div>
+    <h3>Summary Statistics Insights:</h3>
+    <ul>
+        <li>The Dataset had 70692 rows and 22 columns.</li>
+        <li>There are no missing values in the dataset. </li>
+        <li>There are 2181 outliers in BMI.</li>
+        <li>There are 11816 outliers in Mental Health.</li>
+        <li>There are 10624 outliers in Physical Health.</li>
+        <li> High blood pressure count and high cholesterol count was more among the diabetic patients.</li>
+        <li>Interestingly cholesterol check in the past 5year had higher count than among the non-diabetic group.</li>
+        <li>The mean BMI is 29.5 kg/m2. The minimum and maximum BMI was 12 kg/m2 and 98kg/m2 respectively.</li>
+    </ul>
+</div>
+    <div class="footer">
+        <h2></h2>
+    </div>
+    
+</body>
+<style>
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    table {
+        margin: auto;
+    }
+</style>
+   
+</html>

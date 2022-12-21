@@ -1,0 +1,76 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <div class="header">
+        <h1></h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
+            
+            <ul class="nav navbar-nav">
+                <li><a href="/background">Background</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Data
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/aboutdata">About Dataset</a><br>
+                        <a class="dropdown-item" href="/datavariables">Data Variables</a><br>
+                        <a class="dropdown-item" href="/datares">Data Restrictions and FAIRness</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Analysis
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/summarystatistics">Summary Statistics</a><br>
+                        <a class="dropdown-item" href="/univariateanalysis">Univariate Analysis</a><br>
+                        <a class="dropdown-item" href="/bivariateanalysis">Bivariate Analysis</a><br>
+                        <a class="dropdown-item" href="/correlationanalysis">Correlation</a><br>
+                        <a class="dropdown-item" href="/predictiveanalysis">Predictive Analysis</a><br>
+                    </div>
+                </li>
+                <li><a href="/riskcalculator">Risk Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h2>Data Restrictions and FAIRness</h2>
+    <ul>
+        <li>The original dataset is provided by CDC from Kaggle public data repositories, named Behavioral Risk Factor
+            Surveillance System</li>
+        <li>The metadata of the dataset is available and licensed on Kaggle.</li>
+        <li>Alex Teboul created the subset of the data and made it available on Kaggle for public use. </li>
+    </ul>
+
+    <h2>FAIRness</h2>
+    <ol>
+        <li>Findability: The dataset is public and can be searched through the Internet. </li>
+        <li>Accessibility: People can copy, modify, distribute and perform the work without asking permission. The
+            dataset is accessible and downloaded by anyone via Kaggle API. </li>
+        <li>Interoperability: The dataset is stored in .csv format, and it uses a formal, accessible, shared, and
+            broadly applicable language for information representation. </li>
+        <li>Reusability: The dataset is published with a clear and accessible data usage license, with a clear and
+            detailed description of the file content, columns, provenance, and license specifications.</li>
+    </ol>
+
+</body>
+
+</html>

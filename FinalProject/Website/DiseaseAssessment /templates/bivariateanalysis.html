@@ -1,0 +1,95 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <div class="header">
+        <h1></h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/background">Background</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Data
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/aboutdata">About Dataset</a><br>
+                        <a class="dropdown-item" href="/datavariables">Data Variables</a><br>
+                        <a class="dropdown-item" href="/datares">Data Restrictions and FAIRness</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Analysis
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/summarystatistics">Summary Statistics</a><br>
+                        <a class="dropdown-item" href="/univariateanalysis">Univariate Analysis</a><br>
+                        <a class="dropdown-item" href="/bivariateanalysis">Bivariate Analysis</a><br>
+                        <a class="dropdown-item" href="/correlationanalysis">Correlation</a><br>
+                        <a class="dropdown-item" href="/predictiveanalysis">Predictive Analysis</a><br>
+                    </div>
+                </li>
+                <li><a href="/riskcalculator">Risk Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<h1>Please choose the variables between which you want to see the analysis.</h1>
+
+<div class="container-fluid">
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <h5><a class="dropdown-item" href="/bivariateanalysis/BMI">BMI</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/HighBP">High BP</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/GenHlth">General Health</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/PhysHlth">Physical Health</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/MentHlth">Mental Health</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/CholCheck">Cholesterol Check in last 5 years</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/Stroke">Stroke</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/HeartDiseaseorAttack">Heart Disease/Attack</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/Age">Age</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/Sex">Gender</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/Education">Education</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/Income">Income</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/PhysActivity">Physical Activity</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/HighChol">High Cholesterol</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/Smoker">Smoking Status</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/Veggie">Vegetable Intake</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/Fruits">Fruit Intake</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/HvyAlcoholConsump">Heavy Alcohol Consumption</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/DiffWalk">Difficulty In Walking</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/AnyHealthcare">Any Healthcare Coverage</a></h3><br>
+      <h5><a class="dropdown-item" href="/bivariateanalysis/NoDocbcCost">Not seen Doctore Because of Cost</a></h3><br>
+
+
+
+    </div> vs Diabetes
+  </div>
+  
+
+</div>
+</body>
+
+</html>

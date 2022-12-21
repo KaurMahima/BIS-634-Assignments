@@ -1,0 +1,160 @@
+<html>
+
+<body>
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/riskcalculator.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <div class="header">
+        <h1></h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/background">Background</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Data
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/aboutdata">About Dataset</a><br>
+                        <a class="dropdown-item" href="/datavariables">Data Variables</a><br>
+                        <a class="dropdown-item" href="/datares">Data Restrictions and FAIRness</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Analysis
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/summarystatistics">Summary Statistics</a><br>
+                        <a class="dropdown-item" href="/univariateanalysis">Univariate Analysis</a><br>
+                        <a class="dropdown-item" href="/bivariateanalysis">Bivariate Analysis</a><br>
+                        <a class="dropdown-item" href="/correlationanalysis">Correlation</a><br>
+                        <a class="dropdown-item" href="/predictiveanalysis">Predictive Analysis</a><br>
+                    </div>
+                </li>
+                <li><a href="/riskcalculator">Risk Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+     
+
+    <h1 class="title">Calculate Your Diabetes Risk</h1><br>
+    <h4 class="paragraph">DIARISK is a prediction tool to identify patients at risk of developing diabetes. It requires no laboratory testing and has been 
+        validated in multiple populations. DIARISK uses age, BMI, physical health,general health, mental health, prevalence of blood Pressure,
+        education level, income level, and gender to determine risk of developing diabetes.
+        By using DIARISK to identify high-risk people and applying an educational intervention, it has been shown possible to reduce the 
+        incidence of diabetes.</h4>
+
+    <form action="{{ url_for('model')}}" method="post">
+        <div class="form-group">
+            <label for="HighBP">Do you have High Blood Pressure?</label>
+            <select class="form-control" id="HighBP" name="HighBP">
+                <option id="1" value="1">Yes</option>
+                <option id="0" value="0">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="BMI">Enter your Body Mass Index (kg/m2).</label>
+            <input class="form-control" id="BMI" name="BMI">
+        </div>
+        <div class="form-group">
+            <label for="PhysHlth">Did you have Physical illness or injury days in past 30 days (scale 1-30)?</label>
+            <input class="form-control" id="PhysHlth" name="PhysHlth">
+        </div>
+        <div class="form-group">
+            <label for="GenHlth">Would you say that in general your health is</label>
+            <select class="form-control" id="GenHlth" name="GenHlth">
+                <option value="1">Excellent</option>
+                <option value="2">Very Good</option>
+                <option value="3">Good</option>
+                <option value="4">Fair</option>
+                <option value="5">Poor</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="MentHlth">How many days in the pst 30 days did you have poor mental health (scale 1-30
+                days)?</label>
+            <input class="form-control" id="MentHlth" name="MentHlth">
+        </div>
+        <div class="form-group">
+            <label for="Age">Select your age category.</label>
+            <select class="form-control" id="Age" name="Age">
+                <option value="1">18 to 24 years</option>
+                <option value="2">25 to 29 years</option>
+                <option value="3">30 to 34 years</option>
+                <option value="4">35 to 39 years</option>
+                <option value="5">40 to 44 years</option>
+                <option value="6">45 to 49 years</option>
+                <option value="7">50 to 54 years</option>
+                <option value="8">55 to 59 years</option>
+                <option value="9">60 to 64 years</option>
+                <option value="10">65 to 69 years</option>
+                <option value="11">70 to 74 years</option>
+                <option value="12">75 to 79 years</option>
+                <option value="13">80+ years</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Education">Select your education level.</label>
+            <select class="form-control" id="Education" name="Education">
+                <option value="1">Never attended school or only kindergarten</option>
+                <option value="2">elementary</option>
+                <option value="3">Junior High School</option>
+                <option value="4">Senior High School</option>
+                <option value="5">Undergraduate Degree</option>
+                <option value="6">Magister</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Income">What is your Income Level ?</label>
+            <select class="form-control" id="Income" name="Income">
+                <option value="1">less than $10,000</option>
+                <option value="2">Between $10,000 and $15,000</option>
+                <option value="3">Between $15,000 and $20,000</option>
+                <option value="4">Between $20,000 and $25,000</option>
+                <option value="5">Between $25,000 and $35,000</option>
+                <option value="6">Between $35,000 and $50,000</option>
+                <option value="7">Between $50,000 and $75,000</option>
+                <option value="8">$75,000 or more</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Smoker">Have you smoked at least 100 cigarettes in your entire life? [Note: 5 packs = 100
+                cigarettes]?</label>
+            <select class="form-control" id="Smoker" name="Smoker">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Sex">Select gender.</label>
+            <select class="form-control" id="Sex" name="Sex">
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+        </div>
+
+        <div class="container">  
+            <button id ="btn"> Submit </button> 
+        </div>  
+    </form>
+
+    <div class="footer">
+        <h2></h2>
+    </div>
+    
+</body>
+
+</html>

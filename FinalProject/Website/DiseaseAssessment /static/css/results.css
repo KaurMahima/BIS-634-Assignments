@@ -1,0 +1,26 @@
+.heading2{
+    font-weight: bold;
+    color: rgba(9, 9, 9, 0.944);
+    font-size: 50px;
+    text-align: center;
+}
+
+.heading3{
+    margin-right: 150px;
+    margin-left: 80px;
+    font-size: 20px;
+}
+
+.paragraph{
+    font-size: 20px;
+    margin-right: 200px;
+    margin-left: 80px;
+    outline: 5px solid green
+}
+
+.paragraph1{
+    font-size: 20px;
+    margin-right: 200px;
+    margin-left: 80px;
+    outline: 5px solid green
+}
